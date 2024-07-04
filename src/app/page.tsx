@@ -1,7 +1,25 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
+import { useEffect } from "react"; 
+
 export default function Home() {
+
+  useEffect(() => {
+    // Inicialização do OneSignal
+    const OneSignal = (window as any).OneSignal || [];
+    OneSignal.push(() => {
+      OneSignal.init({
+        appId: '67472311-dc24-4cd0-aaa6-d9ff688fcb4d', 
+      });
+
+      // Exemplo: enviar uma notificação
+      OneSignal.sendNotification('Hello, teste Felipe!');
+    });
+  }, []); 
+
+
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
