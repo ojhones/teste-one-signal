@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import Document, { Head } from 'next/document';
+
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,9 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
-      </head>
+      </Head>
       <body className={inter.className}>{children}</body>
     </html>
   );
