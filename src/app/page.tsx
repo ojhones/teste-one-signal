@@ -13,9 +13,6 @@ export default function Home() {
       OneSignal.init({
         appId: "67472311-dc24-4cd0-aaa6-d9ff688fcb4d",
       });
-
-      // Exemplo: enviar uma notificação
-      OneSignal.sendNotification('Hello, teste Felipe!');
     });
   }, []); 
 
