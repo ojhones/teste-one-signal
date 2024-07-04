@@ -11,7 +11,7 @@ export default function Home() {
     const OneSignal = (window as any).OneSignal || [];
     OneSignal.push(() => {
       OneSignal.init({
-        appId: '67472311-dc24-4cd0-aaa6-d9ff688fcb4d', 
+        appId: "67472311-dc24-4cd0-aaa6-d9ff688fcb4d",
       });
 
       // Exemplo: enviar uma notificação
